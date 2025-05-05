@@ -78,7 +78,32 @@
 				window.setTimeout(function() {
 					$search.removeClass('visible');
 				}, 100);
+			})
+			.on('input', function () {			//BUSQUEDA
+				let query = $(this).val().toLowerCase();
+				let encontrado = false;
+			
+				$('p, li, h1, h2').each(function () {
+				  let texto = $(this).text().toLowerCase();
+			
+				  if (!encontrado && texto.includes(query) && query.length > 0) {
+					encontrado = true;
+			
+					// Scroll hasta el párrafo
+					$('html, body').animate({
+					  scrollTop: $(this).offset().top - 100
+					}, 400);
+			
+					// Resaltar momentáneamente
+					$(this).css('background-color', '#fde145');
+					setTimeout(() => {
+					  $(this).css('background-color', '');
+					}, 1000);
+				  }
+				});
 			});
+			
+			
 
 	// Intro.
 		var $intro = $('#intro');
