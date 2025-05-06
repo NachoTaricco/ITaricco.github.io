@@ -2292,6 +2292,35 @@ input, select, textarea {
 
 		.image img {
 			display: block;
+			object-fit: cover;
+			width: 300px;
+			height: 200px;
+		}
+
+		/* CODIGO MIO, INTENTO ACHICAR LAS IMAGENES */
+		#imageneschicas {		
+			width: 65px;
+			height: 65px;
+		}
+
+		#imagenrecomendacion {
+			height: 250px;
+		}
+
+		#imagencurriculum {
+			height: 200px;
+		}
+
+		#imagenproyectos {
+			height: 250px;
+		}
+		
+		#imagenpresentacion {
+			height: 300px;
+		}
+		
+		#imagencarta {
+			height: 350px;
 		}
 
 		.image.left, .image.right {
@@ -2409,6 +2438,7 @@ input, select, textarea {
 		display: -moz-flex;
 		display: -webkit-flex;
 		display: -ms-flex;
+		justify-content: space-evenly;
 		display: flex;
 		cursor: default;
 		list-style: none;
@@ -3418,7 +3448,17 @@ input, select, textarea {
 		margin: 0 0 1em 0;
 		overflow: hidden;
 		position: relative;
-		width: 4em;
+		width: 10em;
+		height: 10em;
+	}
+
+	/* INTENTE UBICAR EL LOGO EN LA FIGURA*/
+	#imagenlogo{
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		object-position: center; /* o 'top', 'left', etc. según lo que quieras mostrar */
+		display: block;
 	}
 
 		#intro .logo:before {
@@ -3435,11 +3475,12 @@ input, select, textarea {
 			width: 100%;
 		}
 
-		#intro .logo img {
+		/* BORRE PARA QUE ME LO EDITE COMO QUERIA */
+		/* #intro .logo img {
 			display: block;
 			margin-left: -0.25em;
 			width: 4.5em;
-		}
+		} */
 
 	#intro header h2 {
 		font-size: 2em;
